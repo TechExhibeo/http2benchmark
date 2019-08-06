@@ -535,6 +535,7 @@ centos_install_php(){
     NEWKEY='listen.mode = 0660'
     line_change 'listen.mode = ' ${FPMCONF} "${NEWKEY}"  
 
+    systemctl restart php-fpm
     #TODO: FETCH SAME PHP INI       
 }    
 
